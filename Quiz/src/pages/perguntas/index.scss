@@ -1,0 +1,599 @@
+#Perguntas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh; 
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    .vinhetafds {
+        width: 100%;
+        height: 150vh;
+        background-color: #0485E2;
+        position: fixed;
+        bottom: -150%;
+        animation: vinheta 0.3s linear;
+    }
+    
+    .cardFixo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100vh;
+
+        background-color: #0485e242;
+        position: fixed;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 450px;
+            height: 450px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+
+
+            > h1 {
+                font-size: 22px;
+                color: #568AD8;
+            }
+
+            button {
+                width: 200px;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                background-color: #0485E2;
+                color: white;
+
+                > a {
+                    color: rgb(255, 255, 255);
+                    text-decoration: none;
+                }
+
+            .botoes {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 40px;
+                }
+            }
+        }
+    }
+
+    .Perguntas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 1200px;
+        height: 650px;
+        margin: 60px 0px 0px 0px;
+
+        .Progresso {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 350px;
+            height: 100%;
+
+            .linha {
+                width: 100%;
+                height: 5px;
+                border-radius: 10px;
+                background-color: #568AD8;
+            }
+
+            .titulo {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+
+                width: 100%;
+                height: 60px;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: white;
+                margin: 0px 0px 10px 0px;
+
+                > h1 {
+                    font-size: 22px;
+                    color: #568AD8;
+                }
+            }
+
+            .Respostas {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 550px;
+                padding: 20px 0px;
+                border-radius: 10px;
+                background-color: white;
+
+                .card {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 90px;
+                    padding: 0px 10px;
+
+                    .resultado {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 90px;
+                        height: 100%;
+                        border-radius: 10px;
+                        background-color: #E7E7E7;
+                        transition: 0.3s;
+
+                        .acertou {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-color: #47E060;
+                        }
+
+                        .errou {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-color: #E72D2D;
+                        }
+
+                        .respondendo {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-color: #568AD8;
+                        }
+                    }
+                    @media(max-width:1230px) {
+                        .resultado {
+                            width: 100%;
+                        }
+                    }
+
+                    .Pergunta {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: start;
+
+                        width: 240px;
+                        height: 100%;
+                        padding: 0px 5px;
+
+                        > h1 {
+                            font-size: 16px;
+                            color: rgb(94, 94, 94);
+                            font-weight: 600;
+                        }
+
+                        > h2 {
+                            font-size: 22px;
+                            color: rgb(37, 37, 37);
+                            font-weight: 400;
+                            overflow-x: hidden;
+                            max-width: 20ch;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    @media(max-width:1230px) {
+                        .Pergunta {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            @media(max-width:630px) {
+                .Progresso {
+                    width: 100%;
+                }
+                .Respostas {
+                    width: 100%;
+                    height: auto;
+                    flex-direction: row;
+                }
+            }
+        }
+
+        @media(max-width:1230px) {
+            .Progresso {
+                width: auto;
+                height: 650px;
+            }
+        }
+        @media(max-width:630px) {
+            .Progresso {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        > .Pergunta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100%;
+            padding: 0px 0px 0px 20px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 100%;
+                padding: 0px 10px;
+                border-radius: 10px;
+                background-color: white;
+
+                .QuizFrei {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 80px;
+                    padding: 10px 0px;
+
+                    .Logo {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        width: 220px;
+                        height: 100%;
+
+                        .imagem {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 70px;
+                            height: 100%;
+                            padding: 5px;
+                            border-radius: 10px;
+                            background-color: #568AD8;
+
+                            >img {
+                                height: 100%;
+                            }
+                        }
+
+                        .Frei {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 140px;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-color: #D2A065;
+
+                            > h1 {
+                                font-size: 22px;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .Pontos {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 150px;
+                        height: 100%;
+                        border-radius: 10px;
+                        background-color: #EDEDED;
+
+                        > h1 {
+                            font-size: 22px;
+                            color: #D2A065;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                #Pergunta {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 200px;
+                    padding: 20px 40px;
+                    border-radius: 10px;
+                    background: linear-gradient(90deg, #0485E2, #3E90CC);
+
+                    > h1 {
+                        font-size: 22px;
+                        color: white;
+                        font-weight: 700;
+                    }
+                }
+
+                @media(max-width:630px) {
+                    #Pergunta {
+                        width: auto;
+                    }
+                }
+
+                #Respostas {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 0px;
+
+                    .grupoResp {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        width: 100%;
+                        height: 85px;
+
+                        .Resposta {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            align-items: center;
+
+                            width: 360px;
+                            height: 90%;
+                            padding: 10px;
+                            border-radius: 10px;
+                            background-color: #EDEDED;
+                            transition: 0.3s;
+
+                            > h1 {
+                                font-size: 22px;
+                                color: rgb(128, 128, 128);
+                                font-weight: 500;
+                                margin-left: 10px;
+                            }
+
+                            .Letra {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+
+                                width: 60px;
+                                height: 100%;
+                                border-radius: 10px;
+                                background-color: #0485E2;
+
+                                > h1 {
+                                    font-size: 22px;
+                                    color: white;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+
+                        @media(max-width:1230px) {
+                            .Resposta {
+                                width: 45%;
+                            }
+                        }
+                        @media(max-width:1030px) {
+                            .Resposta {
+                                width: 100%;
+                                margin: 0px 0px 10px 0px;
+                            }
+                        }
+
+                        .Resposta:hover {
+                            background-color: #3ca5f0;
+                            cursor: pointer;
+
+                            > h1 {
+                                color: white;
+                            }
+                        }
+                    }
+                    @media(max-width:1030px) {
+                        .grupoResp {
+                            flex-direction: column;
+                            height: auto;
+                        }
+                    }
+                }
+
+                .Ajuda {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 60px;
+                    padding: 0px 0px 10px 0px;
+
+                    > button {
+                        height: 100%;
+                        width: 35%;
+                        background-color: #EDEDED;
+                        border: none;
+                        border-radius: 10px;
+                        transition: 0.3s;
+                    }
+
+                    > button:hover {
+                        background-color: #0485E2;
+                        color: white;
+                    }
+                }
+            }
+
+            .timer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 100px;
+                padding: 0px 20px;
+                margin-top: 20px;
+                border-radius: 10px;
+                background-color: white;
+
+                .contagem {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 100%;
+
+                    > h1 {
+                        font-size: 22px;
+                        color: #568AD8;
+                        font-weight: 700;
+                    }
+
+                    > h2 {
+                        font-size: 22px;
+                        color: #33215B;
+                        font-weight: 700;
+                    }
+                }
+
+                .barra {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 100%;
+
+                    .tamanho {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        width: 100%;
+                        height: 5px;
+                        border-radius: 10px;
+                        background-color: #E7E7E7;
+
+                        .carregamento {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-color: #D2A065;
+                            animation: carregar 46s linear;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width:630px) {
+            .Pergunta {
+                padding: 0px 0px 20px 0px;  
+            }
+        }
+    }
+
+    @media(max-width:630px) {
+        .Perguntas {
+            flex-direction: column-reverse;
+            height: auto;
+        }
+    }
+
+    @media(max-width:1230px) {
+        .Perguntas {
+            height: auto;
+        }
+    }
+    @media (max-width: 1240px) {
+        .Perguntas {
+            width: 90%;
+        }
+    }
+}
+
+@keyframes carregar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes vinheta {
+    from {
+        bottom: 00%
+    }
+    to {
+        bottom: -150%;
+    }
+}
