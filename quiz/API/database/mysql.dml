@@ -1,0 +1,30 @@
+INSERT INTO tb_usuario (nm_nome, ds_email)
+	VALUES	("Davi Matos", "email@gmail.com"),
+			("Gabriel", "peppa@gmail.com"),
+			("Lucas", "homem@gmail.com"),
+			("Enzo", "enzo123@gmail.com");
+ 
+ 
+ 
+UPDATE tb_usuario
+  SET nr_acertos = 1,
+	  nr_pontos = 30
+WHERE id_usuario = 4;
+      
+      
+      
+SELECT id_usuario	id,
+	   nm_nome		nome,
+	   nr_acertos   acertos,
+       nr_pontos	pontos
+FROM tb_usuario
+ORDER BY nr_pontos;
+
+
+
+SELECT id_usuario	id,
+	   nm_nome		nome,
+	   nr_acertos   acertos,
+       nr_pontos	pontos
+FROM tb_usuario
+WHERE id_usuario = 2;

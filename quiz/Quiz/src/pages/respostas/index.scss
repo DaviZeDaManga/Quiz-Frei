@@ -1,0 +1,150 @@
+#Respostas {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    .vinhetafds {
+        width: 100%;
+        height: 150vh;
+        background-color: #0485E2;
+        position: fixed;
+        bottom: -150%;
+        animation: vinheta 1s;
+    }
+
+    .Respostas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 800px;
+        height: 650px;
+        border-radius: 10px;
+
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        top: 20%;
+
+        .Imagem {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 380px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+
+            .sombra {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background: linear-gradient(90deg, black, black);
+
+                > img {
+                    border-radius: 10px;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 70%;
+                }
+            }
+        }
+
+        .Resposta {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            > h1 {
+                font-size: 22px;
+                color: #568AD8;
+                margin-bottom: 10px;
+            }
+
+            > p {
+                font-size: 16px;
+            }
+        }
+
+        .ProxPergu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 100%;
+            height: 220px;
+            padding: 10px 20px;
+
+            .PerguntaTitulo {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                width: 200px;
+                height: 100%;
+                border-radius: 10px;
+                background-color: #0485E2;
+
+                > h1 {
+                    font-size: 22px;
+                    color: #6ba6ff;
+                }
+
+                > p {
+                    font-size: 16px;
+                }
+            }
+
+            > button {
+                width: 200px;
+                height: 100%;
+                border: none;
+                background-color: #E6E6E6;
+                border-radius: 10px;
+                transition: 0.3s;
+
+                > a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            > button:hover {
+                background-color: #0485E2;
+                color: white;
+                > a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@keyframes vinheta {
+    from {
+        bottom: 00%
+    }
+    to {
+        bottom: -150%;
+    }
+}

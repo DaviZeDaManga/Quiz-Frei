@@ -1,0 +1,153 @@
+#CardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    .vinhetafds {
+        width: 100%;
+        height: 150vh;
+        background-color: #0485E2;
+        position: fixed;
+        bottom: -150%;
+        animation: vinheta 1s;
+    }
+
+    .CardInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 500px;
+        height: 500px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+
+        .TituloInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            padding: 50px 20px;
+            border-radius: 10px;
+            background-color: #568AD8;
+
+            > h1 {
+                font-size: 22px;
+                color: white;
+            }
+        }
+
+        .Info {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            padding: 20px 10px;
+
+            width: 100%;
+            height: 100%;
+
+            > h1 {
+                font-size: 22px;
+                color: #568AD8;
+                margin-bottom: 10px;
+            }
+
+            > p {
+                font-size: 16px;
+            }
+        }
+
+        .PInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 100%;
+            height: 80px;
+
+            > button {
+                height: 100%;
+                width: 170px;
+                border: none;
+                border-radius: 10px;
+                background-color: #E6E6E6;
+                transition: 0.3s;
+            }
+
+            > button > a {
+                color: black;
+                text-decoration: none;
+            }
+
+            > button:hover {
+                background-color: #568AD8;
+                color: white;
+                cursor: pointer;
+
+                > a {
+                    font-size: 16px;
+                    color: white;
+                }
+            }
+        }
+        @media(max-width: 430px) {
+            #CardInfo {
+                justify-content: start;
+            }
+            .PInfo {
+                position: fixed;
+                bottom: 0;
+                padding: 20px;
+                background-color: white;
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .PInfo > button {
+                padding: 20px;
+                width: 100%;
+                margin: 10px 0px 0px 0px;
+            }
+        }
+    }
+    @media (max-width: 540px) {
+        .CardInfo {
+            width: 90%;
+        }
+    }
+    @media (max-width: 430px) {
+        .CardInfo {
+            height: auto;
+        }
+        .Info > p {
+            margin: 0px 0px 30px 0px;
+        }
+    }
+}
+@media(max-width: 430px) {
+    #CardInfo {
+        justify-content: start;
+    }
+    .CardInfo {
+        margin: 120px 0px 220px 0px;
+    }
+}
+
+@keyframes vinheta {
+    from {
+        bottom: 00%
+    }
+    to {
+        bottom: -150%;
+    }
+}

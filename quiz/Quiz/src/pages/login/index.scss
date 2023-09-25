@@ -1,0 +1,127 @@
+#login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    .vinhetafoda {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 150vh;
+        bottom: -150%;
+        background-color: #db7a2b;
+        position: fixed;
+        z-index: 3;
+        animation: vinheta 1s;
+    }
+
+    .acao {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+
+        > h1 {
+            color: white;
+        }
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 500px;
+        height: 500px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        z-index: 2;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            background-color: #568AD8;
+
+            > h1 {
+                color: white;
+            }
+        }
+
+        .inserir {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+
+            width: 100%;
+            height: 220px;
+            padding: 0px 10px;
+            
+            input {
+                width: 100%;
+                height: 40px;
+                padding: 0px 10px;
+                border-radius: 10px;
+                border: solid #568AD8 3px;
+            }
+
+            input:focus {
+                border: solid 3px #db7a2b;
+                outline: 0;
+            }
+        }
+
+        > button {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            transition: 0.3s;
+            background-color: #568AD8;
+            color: white;
+
+            > a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        .fazerlogin:hover {
+            background-color: #E72D2D;
+            color: white;
+        } 
+        .loginfeito:hover {
+            background-color: #47E060;
+            color: white;
+        } 
+    }
+}
+
+@keyframes vinheta {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: -150%;
+    }
+}
